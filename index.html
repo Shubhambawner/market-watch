@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid Layout with Fullscreen Container</title>
+  <style>
+    body {
+      margin: unset;
+      padding: unset;
+    }
+
+    /* Fullscreen container with grid layout */
+    #idChartsContainer {
+      height: 100vh;
+      width: 100vw;
+      display: flex;
+      /* grid-template-columns: repeat(auto-fit, minmax(20%, 1fr)); */
+      /* grid-template-rows: auto; */
+      /* gap: 10px; */
+      /* padding: 10px; */
+      /* box-sizing: border-box; */
+      background-color: #f5f5f5;
+      flex-wrap: wrap;
+      flex-direction: row;
+    }
+
+
+    .mycontainer {
+      border: 1px solid #fb0303;
+      background-color: #fff;
+      height: calc(25% - 2px);
+      width: calc(25% - 2px);
+      overflow-x: auto;
+      /* Enable horizontal scrolling */
+      overflow-y: auto;
+      /* Hide vertical scrolling */
+      white-space: nowrap;
+      /* Prevent wrapping of child elements */
+    }
+
+    /* Hide scrollbar for Webkit browsers (Chrome, Safari) */
+    .mycontainer::-webkit-scrollbar {
+      display: none;
+      /* Hide scrollbar */
+    }
+
+    /* Hide scrollbar for Firefox */
+    .mycontainer {
+      scrollbar-width: none;
+      /* Hide scrollbar */
+    }
+
+    body::-webkit-scrollbar {
+      display: none;
+      /* Hide scrollbar */
+    }
+
+    .quantity-label {
+      position: relative;
+      /* Position it relative to the container */
+      top: 5px;
+      /* Adjust vertical position */
+      left: 5px;
+      /* Adjust horizontal position */
+      background-color: rgba(255, 255, 255, 0.8);
+      /* Semi-transparent background */
+      padding: 5px;
+      /* Some padding for aesthetics */
+      border: 1px solid #fb0303;
+      /* Optional border for the label */
+      border-radius: 3px;
+      /* Optional rounded corners */
+      font-size: 12px;
+      /* Font size */
+      color: #000;
+      /* Text color */
+      z-index: 10;
+      /* Ensure it appears above other elements */
+      width: fit-content;
+    }
+
+    .mycontainerChild {
+      width: 100%;
+      position: relative;
+      height: 100%;
+      top: -27px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="idChartsContainer">
+    <!-- The script will add new divs with iframes here -->
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
