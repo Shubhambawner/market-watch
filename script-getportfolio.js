@@ -1,4 +1,4 @@
-deployment_id = `AKfycby_6TFzZ1TEWWdjpy9sk32zQTMP1uMKXOZpGdWtOHVrxkOT-X2W6OZjx4XzzVanXVlD`
+deployment_id = `AKfycbxxKrd3AL4igj8tPFO2WFRDTwhMX8j97-p66ECptzZWHU5EQ_gJhabc81BVxsNm61WM`
 gapi_url = `https://script.google.com/macros/s/${deployment_id}/dev`
 zerodha_url = `https://console.zerodha.com/api/reports/holdings/portfolio?date=${new Date().toISOString().split('T')[0]}&children=LQT791&children=GXT264`
 fetch(zerodha_url, {
